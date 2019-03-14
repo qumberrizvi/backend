@@ -56,7 +56,7 @@ def pipebot(request):
     global dld
     request_json = (request.get_json(silent=True))['current']  
     print(request_json)
-    if request_json['owner_name']=='Varun from StarClinch' and request_json['pipeline_id']==1 and dld!=request_json['id'] and request_json[location_key] is not None:
+    if request_json['user_id']==4202436 and request_json['pipeline_id']==1 and dld!=request_json['id'] and request_json[location_key] is not None:
         rr=request_json['id']%len(owner)
         dld=request_json['id']
         print(rr)
